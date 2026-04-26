@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf5;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url("images/choco.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 15px 30px;
+  background: #d4a373;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #b5835a;
+}
+
+/* PRODUCTEN */
+.products {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: white;
+  border-radius: 15px;
+  width: 250px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product h3 {
+  margin: 15px 0 5px;
+}
+
+.product p {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f3e9dc;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #eee;
+}
