@@ -16,14 +16,14 @@
 <section class="hero">
   <div class="hero-text">
     <h1>🍪 Oven van Yomi</h1>
-    <p>Verse homemade cookies, elke dag vers gebakken</p>
+    <p>Verse homemade toetjes, elke dag vers gebakken</p>
     <a href="#bestellen" class="btn">Bestel nu</a>
   </div>
 </section>
 
 <!-- PRODUCTEN -->
 <section class="products">
-  <h2>Onze Cookies</h2>
+  <h2>Onze producten</h2>
 
   <div class="product-container">
 
@@ -32,30 +32,62 @@
       <h3>White cookie</h3>
       <p>€3,00</p>
 
-      <button onclick="toggleDetail(this)" class="detail-btn">
+      <button class="detail-btn" onclick="toggleDetail(this)">
         Bekijk details
       </button>
 
-      <div class="extra-info">
-        <p><strong>Ingrediënten:</strong> bloem, suiker, chocolade</p>
-        <p><strong>Gewicht:</strong> 120g</p>
-        <p><strong>Diameter:</strong> 8 cm</p>
+      <div class="extra-info" data-open="false">
+        <p>Ingrediënten: Roomboter, Bastard suiker, Krystal suiker, Eiren, Vanillesuiker, Tarwebloem, Baksoda, Maizena, Zout, Chocolade stukjes</p>
+        <p>Gewicht: 105g</p>
+        <p>Diameter: 6 cm</p>
       </div>
     </div>
+
 
     <div class="product">
       <img src="img/white%20and%20choco%20cookie.jpeg" alt="white and choco cookie">
       <h3>Choco cookie</h3>
       <p>€3,00</p>
+
+      <button class="detail-btn" onclick="toggleDetail(this)">
+        Bekijk details
+      </button>
+
+      <div class="extra-info" data-open="false">
+        <p>Ingrediënten: Roomboter, Bastard suiker, Krystal suiker, Eiren, Vanillesuiker, Tarwebloem, Baksoda, Maizena, Zout, Cacaopoeder, Chocolade stukjes</p>
+        <p>Gewicht: 105g</p>
+        <p>Diameter: 6 cm</p>
+      </div>
     </div>
 
-    <details>
-      <summary>Bekijk details</summary>
-      <p><strong>Ingrediënten:</strong> bloem, suiker, chocolade, boter</p>
-      <p><strong>Gewicht:</strong> 120g</p>
-      <p><strong>Diameter:</strong> 8 cm</p>
-    </details>
-  </div>
+    <div class="product">
+      <img src="../cookie-website/img/cinnamon%20roll.jpeg" alt="cinnamon Roll">
+      <h3>Cinnamon roll</h3>
+      <p>€3,00</p>
+
+      <button class="detail-btn" onclick="toggleDetail(this)">
+        Bekijk details
+      </button>
+
+      <div class="extra-info" data-open="false">
+        <p>Ingrediënten: Gist, Zout, Krystalsuiker, Ei, Melk, Water, Tarwebloem, Roomboter, Bastard suiker, Cacaopoeder, Kaneel gemalen</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="../cookie-website/img/brownies.jpeg" alt="Brownies" class="brownies">
+      <h3>Brownies</h3>
+      <p>€2,00</p>
+
+      <button class="detail-btn" onclick="toggleDetail(this)">
+        Bekijk details
+      </button>
+
+      <div class="extra-info" data-open="false">
+        <p>Ingrediënten: Roomboter، Krystalsuiker، Bastard suiker، Eiren، Vanillesuiker، Tarwebloem، Zout، Cacaopoeder، Chocolade stukjes</p>
+      </div>
+    </div>
+
 
   </div>
 </section>
@@ -73,6 +105,20 @@
 <footer>
   <p>© 2026 Oven van Yomi</p>
 </footer>
-
 </body>
 </html>
+
+<script>
+    function toggleDetail(button) {
+    const product = button.closest('.product');
+    const info = product.querySelector('.extra-info');
+
+    if (info.style.maxHeight && info.style.maxHeight !== "0px") {
+    info.style.maxHeight = "0px";
+    button.innerText = "Bekijk details";
+  } else {
+    info.style.maxHeight = info.scrollHeight + "px";
+    button.innerText = "Verberg details";
+  }
+  }
+</script>
